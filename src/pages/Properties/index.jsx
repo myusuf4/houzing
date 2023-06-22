@@ -3,4 +3,4 @@ import Properties from "../../components/Proporties";
 
 const PropertiesPage=()=><Properties/>
 
-export default Properties
+export default PropertiesPage
