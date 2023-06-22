@@ -7,12 +7,16 @@ const Container=styled.div`
   flex-direction:column;
   justify-content:center;`;
 
+  const Main=styled.div`
+  display:flex;
+  background: var(--colorPrimary);
+  justify-content:center;`;
+
 const Wrapper=styled.div`
   display:flex;
   align-items:center;
   justify-content:space-between;
 
-  background: var(--colorPrimary);
   color:#fff;
   padding:var(--padding);
   height:64px;
@@ -44,4 +48,4 @@ const Link=styled(NavLink)`
   padding: 0 32px;
   color: #fff;
 `
-export {Container,Wrapper,Sections,Logo,Link}
+export {Container,Wrapper,Sections,Logo,Link,Main}
