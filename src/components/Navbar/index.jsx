@@ -2,6 +2,7 @@ import React from "react";
 import { Container,Wrapper,Sections,Logo,Link,Main } from "./style";
 import { Outlet, useNavigate } from "react-router-dom";
 import {navbar} from '../../utils/navbar'
+import Button from '../Generic/Button'
 
 
 const Navbar=()=>{
@@ -30,7 +31,7 @@ const Navbar=()=>{
             }
           </Sections>
           <Sections>
-            <button>Sign In</button>
+            <Button type='dark' width='120' height='44'>Sign in</Button>
           </Sections>
         </Wrapper>
       </Main>
