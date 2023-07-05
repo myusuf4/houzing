@@ -30,7 +30,7 @@ const getType = ({ type }) => {
   }
 };
 
-const Container = styled.button`
+const Container = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,13 +39,11 @@ const Container = styled.button`
 
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : '14px')};
   height: ${({ height }) => (height ? `${height}px` : '44px')};
-  width: ${({ width }) => (width ? `${width}px` : '130px')};
+  width: ${({ width }) => (width ? `${width}px` : '100%')};
+  outline: none;
+  border: 1px solid #e6e9ec;
 
-  cursor: pointer;
-  ${getType}
-  :active {
-    opacity: 0.7;
-  }
+  /* ${getType} */
 `;
 
 export { Container };

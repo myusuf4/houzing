@@ -1,6 +1,5 @@
-import React from "react";
-import Properties from "../../components/Proporties";
+import Properties from '../../components/Proporties';
 
-const PropertiesPage=()=><Properties/>
+export const PropertiesPage = () => <Properties />;
 
-export default PropertiesPage
+export default PropertiesPage;

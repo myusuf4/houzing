@@ -1,32 +1,38 @@
-import useUniqueId from "../hooks/useId";
-import HomePage from '../pages/Home' 
-import PropertiesPage from '../pages/Properties' 
-import ContactsPage from '../pages/Contacts' 
+import useId from '../hooks/useId';
+import HomePage from '../pages/Home';
+import Properties from '../pages/Properties';
 
-export const navbar=[
+export const navbar = [
   {
-    id: useUniqueId,
-    title:'Home',
-    element:<HomePage/>,
-    path:'/home',
-    private:false,
-    hidden:false
+    id: useId,
+    element: <HomePage />,
+    title: 'Home',
+    path: '/home',
+    private: false,
+    hidden: false,
   },
   {
-    id: useUniqueId,
-    title:'Properties',
-    element:<PropertiesPage/>,
-    path:'/properties',
-    private:false,
-    hidden:false
+    id: useId,
+    element: <Properties />,
+    title: 'Properties',
+    path: '/properties',
+    private: false,
+    hidden: false,
   },
   {
-    id: useUniqueId,
-    title:'Contacts',
-    element:<ContactsPage/>,
-    path:'/contacts',
-    private:false,
-    hidden:false
+    id: useId,
+    element: <h1>Generic Sign In</h1>,
+    title: 'Sign In',
+    path: '/signin',
+    private: false,
+    hidden: true,
+  },
+  {
+    id: useId,
+    element: <h1>Generic Sign Up</h1>,
+    title: 'Sign Up',
+    path: '/signup',
+    private: false,
+    hidden: true,
   },
 ];
-
