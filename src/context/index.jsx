@@ -1,14 +1,11 @@
-import PropertiesProvider from "./properties";
+import PropertiesProvider from './properties';
 
-
-
-const RootContext=({children})=>{
-  return(
+const RootContext = ({ children }) => {
+  return (
     <>
-        <PropertiesProvider>
-          {children}
-        </PropertiesProvider>
+      <PropertiesProvider>{children}</PropertiesProvider>
     </>
-  )
-}
-export default RootContext
+  );
+};
+
+export default RootContext;

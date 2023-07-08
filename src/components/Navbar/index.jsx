@@ -1,41 +1,45 @@
-import React from "react";
-import { Container,Wrapper,Sections,Logo,Link,Main } from "./style";
-import { Outlet, useNavigate } from "react-router-dom";
-import {navbar} from '../../utils/navbar'
+import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { navbar } from '../../utils/navbar';
+import Filter from '../Filter';
+import { Button } from '../Generic/Button';
+import { Container, Link, Logo, Main, Section, Wrapper } from './style';
 
-
-const Navbar=()=>{
-  const navigate=useNavigate();
-  return(
+export const Home = () => {
+  const navigate = useNavigate();
+  return (
     <Container>
       <Main>
-
         <Wrapper>
-          <Sections onClick={()=>navigate('/home')} logo>
-            <Logo/> <h3>Houzing</h3>
-          </Sections>
-          <Sections>
-            {
-              navbar.map(({title,path},index)=>{
-                return(
+          <Section onClick={() => navigate('/home')} logo>
+            <Logo /> <h3 style={{ color: 'white' }}>Houzing</h3>
+          </Section>
+          <Section>
+            {navbar.map(({ title, path, hidden }, index) => {
+              return (
+                !hidden && (
                   <Link
-                  className={({isActive})=>isActive&&'active'}
-                  key={index}
-                  to={path}
+                    className={({ isActive }) => isActive && 'active'}
+                    key={index}
+                    to={path}
                   >
-                    
-                    {title}</Link>
+                    {title}
+                  </Link>
                 )
-              })
-            }
-          </Sections>
-          <Sections>
-            <button>Sign In</button>
-          </Sections>
+              );
+            })}
+          </Section>
+          <Section>
+            <Button onClick={() => navigate('/signin')} type='dark'>
+              Sign In
+            </Button>
+          </Section>
         </Wrapper>
       </Main>
-      <Outlet/>
+      <Filter />
+      <Outlet />
     </Container>
-  )
-}
-export default Navbar;
+  );
+};
+
+export default Home;
