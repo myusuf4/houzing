@@ -3,14 +3,14 @@ import { ReactComponent as arrow } from '../../assets/icons/arrow.svg';
 
 const Container = styled.div`
   position: relative;
-  height: 571px;
+  height: 450px;
 `;
 
 const Arrow = styled(arrow)`
   position: absolute;
   top: 50%;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   padding: 18px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
